@@ -2,7 +2,7 @@
 
 Official conference website for the 2026 Purdue AI in P-12 Education Conference.
 
-Website: https://beeeeeeeelle.github.io/purdue-ai-p12-conference/
+Website: https://beeeeeeelle.github.io/purdue-ai-p12-conference/
 
 ## Conference details
 
