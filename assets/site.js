@@ -19,13 +19,19 @@ const conferenceStart = new Date('2026-11-02T08:30:00-05:00');
 const now = new Date();
 const days = Math.ceil((conferenceStart - now) / 86400000);
 const countdown = document.querySelector('#days-to-go');
+const urgencyHeading = document.querySelector('#urgency-heading');
+const urgencyAction = document.querySelector('#urgency-action');
 
 if (countdown && days > 1 && days < 14) {
-  countdown.textContent = `${days} days remain to register for November 2.`;
+  countdown.textContent = `Only ${days} days until November 2. Registration is still open.`;
 } else if (countdown && days === 1) {
-  countdown.textContent = 'The conference is tomorrow.';
+  countdown.textContent = 'The conference is tomorrow. Registration is still open.';
 } else if (countdown && days === 0) {
   countdown.textContent = 'The conference is today.';
+} else if (countdown && days < 0) {
+  if (urgencyHeading) urgencyHeading.textContent = 'Thank you for joining us.';
+  countdown.textContent = 'Conference materials and resources will be posted here.';
+  if (urgencyAction) urgencyAction.hidden = true;
 }
 
 const year = document.querySelector('#year');
