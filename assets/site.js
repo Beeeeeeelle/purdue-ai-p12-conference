@@ -23,11 +23,11 @@ const urgencyHeading = document.querySelector('#urgency-heading');
 const urgencyAction = document.querySelector('#urgency-action');
 
 if (countdown && days > 1 && days < 14) {
-  countdown.textContent = `Only ${days} days until November 2. Registration is still open.`;
+  countdown.textContent = `Only ${days} days until November 2. On-site registration will be available.`;
 } else if (countdown && days === 1) {
-  countdown.textContent = 'The conference is tomorrow. Registration is still open.';
+  countdown.textContent = 'The conference is tomorrow. On-site registration will be available.';
 } else if (countdown && days === 0) {
-  countdown.textContent = 'The conference is today.';
+  countdown.textContent = 'The conference is today. On-site registration is available.';
 } else if (countdown && days < 0) {
   if (urgencyHeading) urgencyHeading.textContent = 'Thank you for joining us.';
   countdown.textContent = 'Conference materials and resources will be posted here.';
