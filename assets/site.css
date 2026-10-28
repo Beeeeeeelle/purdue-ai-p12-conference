@@ -258,11 +258,11 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 82px); line-height: .98; }
 .sponsor-heading { display: grid; grid-template-columns: 1.25fr .75fr; gap: 80px; align-items: end; margin-bottom: 70px; }
 .sponsor-heading h2 { color: var(--black); }
 .sponsor-heading > p { margin: 0 0 7px; color: var(--muted); }
-.featured-sponsors { display: grid; grid-template-columns: 1fr 1fr .86fr; gap: 18px; }
+.featured-sponsors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .logo-card, .profile-card { min-height: 270px; padding: 24px; background: transparent; color: var(--black); border: 1px solid var(--railway-gray); text-decoration: none; transition: background .18s, border-color .18s; }
-.logo-card { display: flex; flex-direction: column; }
+.logo-card { min-height: 245px; display: flex; flex-direction: column; background: rgba(255,255,255,.74); }
 .logo-card > span, .profile-card span { color: var(--aged); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-.logo-card img { width: 82%; height: 118px; margin: auto; object-fit: contain; }
+.logo-card img { width: 88%; height: 112px; margin: auto; object-fit: contain; }
 .logo-card em { font-style: normal; font-size: 14px; font-weight: 700; }
 .logo-card:hover, .profile-card:hover { background: rgba(255,255,255,.58); border-color: var(--aged); }
 .logo-card:hover em, .profile-card:hover strong { text-decoration: underline; }
